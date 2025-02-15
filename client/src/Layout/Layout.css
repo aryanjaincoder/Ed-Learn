@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    
+  }
+  /* Root Variables */
+  :root {
+    --bg-light: #ffffff;
+    --text-light: #333;
+    --primary-light: #007bff;
+    --secondary-light: #ffcc00;
+  
+    --bg-dark: #1a1a1a;
+    --text-dark: #f1f1f1;
+    --primary-dark: #ffcc00;
+    --secondary-dark: #007bff;
+  }
+  
+  /* Light & Dark Mode */
+  body {
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  /* General Styles */
+  .App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Button Styling */
+  button {
+    cursor: pointer;
+  }
+  

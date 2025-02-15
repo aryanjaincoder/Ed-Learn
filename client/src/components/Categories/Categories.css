@@ -1,0 +1,39 @@
+.categories {
+    text-align: center;
+    padding: 30px;
+    
+  }
+  .categories>h2{
+    margin: 20px;
+  }
+  .category-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .category-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .category-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode .category-btn {
+    background: #ffcc00;
+    color: #000;
+  }
+  
+  body.dark-mode .category-btn:hover {
+    background: #ff9900;
+  }
+  

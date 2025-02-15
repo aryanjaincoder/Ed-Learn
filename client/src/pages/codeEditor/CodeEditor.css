@@ -1,0 +1,124 @@
+/* Container */
+.code-editor-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+   
+  }
+  
+  .code-editor-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Editor Window */
+  .editor-window {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Editor Header */
+  .editor-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  .editor-header label {
+    font-size: 16px;
+  }
+  
+  /* Language Selector */
+  .language-select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Input Box */
+  .input-box {
+    margin: 10px auto;
+    width: 100%;
+    height: 80px;
+  
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Run Button */
+  .run-btn {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .run-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Output Box */
+  .output-box {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .output-box h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  /* Dark Mode */
+  .code-editor-container.dark {
+    background: #1e1e1e;
+    color: white;
+  }
+  
+  .code-editor-container.dark .editor-window {
+    background: #282c34;
+    border: 1px solid #444;
+  }
+  
+  .code-editor-container.dark .editor-header {
+    background: #ffcc00;
+    color: black;
+  }
+  
+  .code-editor-container.dark .output-box {
+    background: #333;
+    color: #fff;
+  }
+  
+  .code-editor-container.dark .run-btn {
+    background: #ffcc00;
+    color: #000;
+  }
+  
+  .code-editor-container.dark .run-btn:hover {
+    background: #ff9900;
+  }
+  

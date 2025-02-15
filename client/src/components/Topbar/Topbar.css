@@ -1,0 +1,266 @@
+/* Light & Dark Mode Variables */
+:root {
+    --bg-light: #ffffff;
+    --text-light: #333;
+    --primary-light: #007bff;
+    --secondary-light: #ffcc00;
+
+    --bg-dark: #1a1a1a;
+    --text-dark: #f1f1f1;
+    --primary-dark: #ffcc00;
+    --secondary-dark: #007bff;
+  }
+
+  /* Light & Dark Mode Styling */
+  body {
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  /* Topbar Styling */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: var(--bg-light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+  }
+
+  .header>h2{
+
+    font-size: 50px;
+  }
+
+  body.dark-mode .topbar {
+    background: var(--bg-dark);
+  }
+
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-family: "Pacifico", serif;
+    font-weight: bold;
+    color: var(--text-light);
+  }
+
+  body.dark-mode .logo {
+    color: var(--text-dark);
+  }
+
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links  {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--primary-light);
+  }
+
+  body.dark-mode .nav-links a {
+    color: var(--text-dark);
+  }
+
+  body.dark-mode .nav-links a:hover {
+    color: var(--primary-dark);
+  }
+
+  /* Authentication Buttons */
+  .auth-buttons {
+    display: flex;
+    gap: 12px;
+  }
+
+  .practice-btnn{
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
+    margin: 10px;
+  }
+
+  .practice-btnn:hover {
+    color: var(--primary-light);
+  }
+
+  body.dark-mode .practice-btnn {
+    color: var(--text-dark);
+  }
+
+  body.dark-mode .practice-btnn:hover {
+    color: var(--primary-dark);
+  }
+
+  .login-btn,
+  .register-btn {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+
+  .login-btn {
+    background: var(--primary-light);
+    color: white;
+  }
+
+  .register-btn {
+    background: var(--secondary-light);
+    color: black;
+  }
+
+  .login-btn:hover {
+    background: #0056b3;
+  }
+
+  .register-btn:hover {
+    background: #e6b800;
+  }
+
+  body.dark-mode .login-btn {
+    background: var(--primary-dark);
+  }
+
+  body.dark-mode .register-btn {
+    background: var(--secondary-dark);
+  }
+
+  /* Theme Toggle */
+  .theme-toggle {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.3s;
+  }
+
+  body.dark-mode .theme-toggle {
+    color: var(--text-dark);
+  }
+
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+  }
+  body.dark-mode .menu-toggle {
+    color: var(--text-dark);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: var(--bg-light);
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    body.dark-mode .nav-links {
+      background: var(--bg-dark);
+    }
+
+    .nav-links.open {
+      transform: translateX(0);
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+
+  .user-container {
+    position: relative;
+    display: flex;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-btn {
+    display: flex;
+    align-items: center;
+    background-color:var(--secondary-light) ;
+    border: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+
+
+  .user-icon {
+    font-size: 24px;
+    margin-right: 8px;
+    color: black;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #333;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+
+  }
+
+  .dropdown-menu a, .logout-btn {
+    color: white;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .dropdown-menu a:hover, .logout-btn:hover {
+    background: #444;
+  }
+
+  /* Logout Button */
+  .logout-btn {
+    color: red;
+    font-weight: bold;
+  }

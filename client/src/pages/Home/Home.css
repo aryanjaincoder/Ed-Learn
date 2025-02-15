@@ -1,0 +1,150 @@
+/* Root Variables */
+:root {
+  --bg-light: #ffffff;
+  --text-light: #333;
+  --primary-light: #007bff;
+  --secondary-light: #ffcc00;
+
+  --bg-dark: #1a1a1a;
+  --text-dark: #f1f1f1;
+  --primary-dark: #ffcc00;
+  --secondary-dark: #007bff;
+}
+
+/* Light & Dark Mode */
+body {
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Hero Section */
+.hero {
+  
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--primary-light);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: var(--secondary-light);
+  color: black;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e6b800;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Courses Section */
+.courses {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f8f8f8;
+}
+
+body.dark-mode .courses {
+  background: #222;
+}
+
+.courses h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+body.dark-mode .course-card {
+  background: #333;
+  color: white;
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background: var(--secondary-light);
+  color: black;
+  padding: 15px;
+  border-radius: 6px;
+  max-width: 400px;
+  margin: 10px auto;
+  font-style: italic;
+}
+
+body.dark-mode .testimonial {
+  background: var(--primary-dark);
+  color: black;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary-light);
+  color: white;
+}
+
+body.dark-mode .footer {
+  background: var(--primary-dark);
+}
+
+

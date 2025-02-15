@@ -1,0 +1,58 @@
+/* UserPreferences.css */
+
+.preferences-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .level-selection, .interest-selection {
+    margin-bottom: 20px;
+  }
+  
+  .levels, .interests {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f0f0f0;
+    transition: background 0.3s;
+  }
+  
+  button.selected {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .save-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .save-btn:hover {
+    background: #218838;
+  }
+  

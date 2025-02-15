@@ -1,0 +1,91 @@
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.contact-card .role {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-logo{
+    color:#2a2a2a ;
+}
+
+.contact-card a:hover {
+  color: #0056b3;
+}
+
+/* Dark Mode Support */
+body.dark-mode .contact-card {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+body.dark-mode .contact-logo {
+  color: #fff;
+}
+
+body.dark-mode .contact-card {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+body.dark-mode .contact-card a {
+  color: #ffcc00;
+}
+
+body.dark-mode .contact-card a:hover {
+  color: #ff9900;
+}

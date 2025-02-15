@@ -1,0 +1,26 @@
+.did-you-know {
+  text-align: center;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 500px;
+  
+}
+
+.did-you-know p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode .did-you-know {
+  background: #222;
+  color: #fff;
+ 
+}
+
+body.dark-mode .did-you-know > p {
+  color: #fff;
+}
