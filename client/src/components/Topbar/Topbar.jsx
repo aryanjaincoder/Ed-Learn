@@ -1,16 +1,17 @@
-import React, { useState, useContext } from "react";
-import { FaSun, FaMoon, FaBars, FaTimes, FaUserCircle } from "react-icons/fa";
+import { useState, useContext } from "react";
+import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Topbar.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Context } from "../../context/Context";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Topbar() {
   const { user, dispatch } = useContext(Context);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const { darkMode, setDarkMode } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState(false);
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -28,9 +29,6 @@ export default function Topbar() {
         <Link className="link" to="/">
           Home
         </Link>
-        <Link className="link" to="/developer">
-          Developer
-        </Link>
         <Link className="link" to="/courses">
           Courses
         </Link>
@@ -43,8 +41,10 @@ export default function Topbar() {
         <Link className="link" to="/contact">
           Contact
         </Link>
+        <Link className="link" to="/developer">
+          Developer
+        </Link>
       </nav>
-
       {user ? (
         <div className="user-container">
           <button
@@ -61,24 +61,9 @@ export default function Topbar() {
 
           {dropdownOpen && (
             <div className="dropdown-menu">
-              <div
-                className="dropdown-item with-submenu"
-                onMouseEnter={() => setSubmenuOpen(true)}
-                onMouseLeave={() => setSubmenuOpen(false)}
-              >
-                <span>Dashboard</span>
-                {/* {submenuOpen && (
-                  <div className="submenu">
-                    <Link to="/dashboard/profile">Profile</Link>
-                    <Link to="/dashboard/courses">Token</Link>
-                    <Link to="/dashboard/settings">Certification</Link>
-                  </div>
-                )} */}
-              </div>
-              <Link className="dropdown-item" to="/settings">
-                Settings
-              </Link>
-              <div className="dropdown-item logout-btn" onClick={handleLogout}>
+              <Link to="/profile">Dashboard</Link>
+              <Link to="/">Settings</Link>
+              <div onClick={handleLogout} className="logout-btn">
                 Logout
               </div>
             </div>
