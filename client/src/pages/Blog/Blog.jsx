@@ -179,12 +179,9 @@ export default function Blog() {
           <button className={contentType === "playlist" ? "active-tab" : ""} onClick={() => fetchResults("playlist")}>
             Playlists
           </button>
-          <button className={activeSection === "notes" ? "active-tab" : ""} onClick={() => setActiveSection("notes")}>
+          {/* <button className={activeSection === "notes" ? "active-tab" : ""} onClick={() => setActiveSection("notes")}>
             Notes
-          </button>
-          <button className={activeSection === "news" ? "active-tab" : ""} onClick={() => setActiveSection("news")}>
-            News
-          </button>
+          </button> */}
         </div>
       )}
 
@@ -275,4 +272,3 @@ export default function Blog() {
     </div>
   );
 }
-
